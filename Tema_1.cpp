@@ -8,6 +8,7 @@ Write your code in this editor and press "Run" button to compile and execute it.
 
 #include <iostream>
 #include <string>
+#include <utility>
 using namespace std;
 
 class Car {
@@ -41,6 +42,18 @@ class Car {
             this->engine_power = new int(*another_car.engine_power); 
             
         }
+        
+        Car(Car&& other_car) noexcept
+        :   brand(move(other_car.brand)),
+            model(other_car.model),
+            engine_capacity(other_car.engine_capacity),
+            engine_power(other_car.engine_power)
+        {
+            other_car.brand=nullptr;
+            other_car.model=nullptr;
+            other_car.engine_capacity=nullptr;
+            other_car.engine_power=nullptr;
+        }
        
         
         void apply_soft_power(int hp)
@@ -69,6 +82,7 @@ int main()
     car.apply_soft_power(30);
     
     Car another_car = car;
+    Car moved_car = move(another_car);
     
 
     return 0;
