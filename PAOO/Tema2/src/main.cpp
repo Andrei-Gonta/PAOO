@@ -22,11 +22,28 @@ class Exercitiu
     
 };
 
+//item 5
+class Exercitiu_modificat
+{
+public:
+  
+  Exercitiu_modificat() = default;
 
+  Exercitiu_modificat(const Exercitiu_modificat&) = default;
+  ~Exercitiu_modificat() = default;
+  
+
+};
 
 
 int main()
 {
+     //item 4
     Exercitiu bench_press("Bench press", 4, 8, 80);
+    
+    //item 5
+    Exercitiu_modificat modex1;
+    Exercitiu_modificat modex2 = modex1;
+    cout<<"copiat prin copy construcotrul default";
     return 0;
 }
