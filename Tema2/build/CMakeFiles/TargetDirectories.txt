@@ -1,0 +1,3 @@
+/home/Andrei/Andrei/PAOO/Tema2/build/CMakeFiles/Tema2.dir
+/home/Andrei/Andrei/PAOO/Tema2/build/CMakeFiles/edit_cache.dir
+/home/Andrei/Andrei/PAOO/Tema2/build/CMakeFiles/rebuild_cache.dir
