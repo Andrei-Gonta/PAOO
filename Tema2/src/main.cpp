@@ -29,8 +29,17 @@ public:
   
   Exercitiu_modificat() = default;
 
-  Exercitiu_modificat(const Exercitiu_modificat&) = default;
+  //Exercitiu_modificat(const Exercitiu_modificat&) = default;
   ~Exercitiu_modificat() = default;
+
+  //item 6
+  
+  //copy constructor dezactivat
+  Exercitiu_modificat(const Exercitiu_modificat&) = delete;
+
+  //dezactivare operator de atribuire
+  Exercitiu_modificat& operator = (const Exercitiu_modificat&) = delete;
+  
   
 
 };
@@ -43,7 +52,8 @@ int main()
     
     //item 5
     Exercitiu_modificat modex1;
-    Exercitiu_modificat modex2 = modex1;
-    cout<<"copiat prin copy construcotrul default";
+    //item6
+     Exercitiu_modificat modex2 = modex1; // genereaza eroare
+    
     return 0;
 }
