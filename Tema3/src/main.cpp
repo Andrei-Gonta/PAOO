@@ -17,7 +17,10 @@ public:
 
   Student& operator=(const Student& aux)
   {
-    
+    if(this == &aux)
+      {
+	return *this;
+      }
     name = aux.name;
     id = aux.id;
     return *this;
